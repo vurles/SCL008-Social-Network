@@ -230,7 +230,7 @@ cuando lo completes:
 | Presentaciones |
 
 
-### Habilidades Técnicas, Fron-end
+### Habilidades Técnicas, Front-end
 
 | Habilidad |
 |-----------|
