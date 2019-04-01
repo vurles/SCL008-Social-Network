@@ -2,22 +2,32 @@
 // solo autentificacion
 
   // Initialize Firebase
-  // TODO: Replace with your project's customized code snippet
-  var config = {
-    apiKey: "AIzaSyD36cB7TFje_JTuaP53m_Q4sJJirK-hLRg",
-    authDomain: "tinder-para-mascotas.firebaseapp.com",
-    databaseURL: "https://tinder-para-mascotas.firebaseio.com",
-    projectId: "tinder-para-mascotas",
-    storageBucket: "tinder-para-mascotas.appspot.com",
-    messagingSenderId: "236093972910"
-  };
-  firebase.initializeApp(config);
 
-
+  
 
 export const login = () => {
- 
-}
+    let provider = new firebase.auth.GoogleAuthProvider();
+    //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+        // Esto te da un token de acceso de Google. Puedes usarlo para acceder a la API de Google.
+        let token = result.credential.accessToken;
+      // La información del usuario que ha iniciado sesión.
+        let user = result.user;
+        console.log(user);
+        //mensajes de errores
+      }).catch(function(error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.email;
+        // error por credenciales malas
+        const credential = error.credential;
+        
+      });
+   
+};
+
+
 export const acount = () => {
     let mail = document.getElementById('email').value;
     let password = document.getElementById('contrasena').value;
@@ -26,9 +36,20 @@ export const acount = () => {
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .catch(function(error) {
     // Handle Errors here.
-        var errorCode =alert (error.code);
-        var errorMessage = alert(error.message);
+        let errorCode =alert (error.code);
+        let errorMessage = alert(error.message);
     // ...
   });
 
 }
+// esto nos permite enviar un vinculo de autentificacion al correo
+// firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
+//   .then(function() {
+//     // The link was successfully sent. Inform the user.
+//     // Save the email locally so you don't need to ask the user for it again
+//     // if they open the link on the same device.
+//     window.localStorage.setItem('emailForSignIn', email);
+//   })
+//   .catch(function(error) {
+//     // Some error occurred, you can inspect the code: error.code
+//   });
