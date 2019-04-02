@@ -1,0 +1,28 @@
+/*@media only screen and (max-width: 600px) {
+    body{
+        background: white;
+        }
+        .logo,.login,.create,.container{
+          text-align: center;
+        }
+    .img{
+        text-align: center;
+        width: 50%;  
+    }    
+  }
+  */
+  @media (min-width: 1px) and (max-width: 600px){
+	body{
+		background:white;
+		background-size: cover;
+		height: 100vh;
+    }
+    img{
+        width: 100vw;
+        padding-top: 30%
+    }
+    .logo,.login,.create,.container{
+        text-align: center;
+        color: #ff6e49;
+    }
+}
