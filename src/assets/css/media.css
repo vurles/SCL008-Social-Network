@@ -11,18 +11,26 @@
     }    
   }
   */
-  @media (min-width: 1px) and (max-width: 600px){
+  @media screen and (max-width: 600px){
 	body{
 		background:white;
 		background-size: cover;
 		height: 100vh;
     }
     img{
-        width: 100vw;
-        padding-top: 30%
+      width: 100%;
+      justify-content: center;      
     }
     .logo,.login,.create,.container{
         text-align: center;
-        color: #ff6e49;
+        
     }
+}    
+/*Device = Desktops
+Screen = 1281px to higher resolution desktops*/
+  
+@media (min-width: 1281px) {
+  
+
+  
 }
