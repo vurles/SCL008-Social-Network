@@ -9,5 +9,11 @@ background: white;
 
 .logo,.login,.create,.container{
   text-align: center;
-  color: #ff6e49;
-};
+}
+
+.login,.create{
+  margin-top: 3rem;
+  font-size: 20px;
+}
+
+
