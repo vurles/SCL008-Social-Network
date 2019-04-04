@@ -11,7 +11,7 @@ export const templateLogin = () => {
     
     const btn = containerLogin.querySelector('#loguin');
     btn.addEventListener('click', () => {
-       console.log(login());
+       login();
     })
     return containerLogin
      login();

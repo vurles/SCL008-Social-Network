@@ -13,5 +13,6 @@ export const templateAcount = () => {
     btn.addEventListener('click', () => {
         console.log(acount());
     })
+    acount();
     return containerAcount;
 }
