@@ -15,6 +15,9 @@ const cambioRuta = (hash) => {
     if(hash === '#/muro'){
         return showTemplate(has);
     }
+    if(hash === '#/sesion'){
+        return showTemplate(hash);
+    }
    
 }
 

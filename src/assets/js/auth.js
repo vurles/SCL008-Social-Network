@@ -1,7 +1,6 @@
 import { templatePostWall } from "../views/templatePostWall.js";
 
-// el usuario se puede loguar con google
-export const login = () => {
+  export const login = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
     //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     firebase.auth().signInWithPopup(provider)
@@ -97,3 +96,18 @@ export const userCheck = () => {
     }
   });
 }
+
+export const session = () => {
+    let emmail = document.getElementById('email').value;
+    let pass = document.getElementById('contrasena').value;
+    console.log(emmail);
+    console.log(pass);
+  firebase.auth().signInWithEmailAndPassword(emmail, pass)
+    .catch(function(error) {
+      // Handle Errors here.
+          let errorCode =alert (error.code);
+          let errorMessage = alert(error.message);
+      // ...
+    });
+  // 
+  }

@@ -1,5 +1,6 @@
 // DOM
 import{acount} from './../js/auth.js';// esta es la ruta
+
 export const templateAcount = () => {
     const containerAcount = document.createElement('div');
     const contenAcount = `
