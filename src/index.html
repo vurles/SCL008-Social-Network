@@ -7,14 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    
-
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 <body>
+    <section></section>
     <div class="logo">
         <a href="index.html"> <img src="assets/img/tinpet.png" style="width: 150px;" alt="Logo"></a>
+    </div>
+
+    <div class="container">
+
     </div>
 <ul>
   <li class="login">
@@ -23,15 +26,23 @@
     <li class="create">
             <a href="#/crear">Crear cuenta</a>
         </li>
+        <li class="session">
+            <a href="#/sesion">Iniciar sesión</a>
+        </li>
 </ul>
 
 <div id="root" class="container"></div>
 <div class="image">
 <img src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </div>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-functions.js"></script>
     <script type="module" src="./main.js"></script>
 </body>
 </html>
