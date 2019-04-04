@@ -11,6 +11,9 @@ const cambioRuta = (hash) => {
     if(hash === '#/crear'){
         return showTemplate(hash);
     }
+    if(hash === '#/sesion'){
+        return showTemplate(hash);
+    }
    
 }
 
