@@ -13,7 +13,7 @@ export const templateLogin = () => {
     
     const btn = containerLogin.querySelector('#loguin');
     btn.addEventListener('click', () => {
-       console.log(login());
+       login();
     })
     const btn2 = containerLogin.querySelector('#sesion');
     btn2.addEventListener('click', () => {

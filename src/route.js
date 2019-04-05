@@ -1,5 +1,6 @@
 import{templateLogin} from './assets/views/templateLogin.js';
 import{templateAcount} from './assets/views/templateAcount.js';
+import{templatePostWall} from './assets/views/templatePostWall.js'
 // crear una funcion que reciba el # segun el mach que retorne otra funcion que va imprimir el temple en el html
 
 
@@ -10,6 +11,9 @@ const cambioRuta = (hash) => {
     }
     if(hash === '#/crear'){
         return showTemplate(hash);
+    }
+    if(hash === '#/muro'){
+        return showTemplate(has);
     }
     if(hash === '#/sesion'){
         return showTemplate(hash);
@@ -29,6 +33,9 @@ const showTemplate = (hash) =>{
       break;
       case'crear':
       containerRoot.appendChild(templateAcount());// bis
+      break;
+      case'muro':
+      containerRoot.appendChild(templatePostWall());
       break;
       default:
       containerRoot.innerHTML = `<p> Error 404 </p>`

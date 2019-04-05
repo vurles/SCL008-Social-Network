@@ -1,6 +1,7 @@
-
 // creamos dos funciones para el login  con goglee y la creacion de la cuenta
-// solo autentificacion  
+// solo autentific
+import { templatePostWall } from "../views/templatePostWall.js";
+
 
   export const login = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
@@ -11,6 +12,7 @@
         let token = result.credential.accessToken;
       // La información del usuario que ha iniciado sesión.
         let user = result.user;
+        templatePostWall(user)
         console.log(user);
         //mensajes de errores
       }).catch(function(error) {
@@ -24,13 +26,16 @@
    
 };
 
-
-export const acount = (mail, password)=> {
-    console.log(mail)
-    console.log(password)
+//esta es la funcion para que el usuario cree una cuenta 
+export const acount = () => {
+    let mail = document.getElementById('email').value;
+    let password = document.getElementById('contrasena').value;
+    console.log(mail);
+    console.log(password);
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
-      verificar()
+      verificar();
+      eyes();
     })
     .catch(function(error) {
     // Handle Errors here.
@@ -39,18 +44,22 @@ export const acount = (mail, password)=> {
     // ...
   });
 // 
+  
+// observador de datos del usuario
 }
 export const eyes = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      let displayName = user.displayName;
+      console.log(displayName);
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      console.log(photoURL);
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
       // ...
     } else {
       // User is signed out.
@@ -58,7 +67,8 @@ export const eyes = () => {
     }
   });
 }
-export const verificar = () => {
+// funcion que se llama en forma de promesa .then en la funcion acount
+const verificar = () => {
   let user = firebase.auth().currentUser;
 
 user.sendEmailVerification().then(function() {
@@ -68,6 +78,26 @@ user.sendEmailVerification().then(function() {
   // An error happened.
   alert('Usuario ya registrado');
 });
+}
+//esta funcion es para loguaese con una cuenta ya creada
+export const loginUser = () => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+  
+}
+export const userCheck = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+    } else {
+      // No user is signed in.
+    }
+  });
 }
 
 export const session = () => {

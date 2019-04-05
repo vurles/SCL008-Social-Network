@@ -25,5 +25,6 @@ export const templateAcount = () => {
         console.log(razaPets);
         acount(mail, password);
     })
-    return containerAcount;    
+    acount();
+    return containerAcount;
 }
