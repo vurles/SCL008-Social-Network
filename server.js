@@ -6,6 +6,6 @@ app.use(express.static(__dirname + '/src'));
 app.get('/',function(request, response){
   response.sendFile(__dirname + '/index.html');
 });
-app.listen(4200, function(){// si el servidor se queda pegado podemos cambiar el 3000 por 4200 o reiniciar el pc
+app.listen(5000, function(){// si el servidor se queda pegado podemos cambiar el 3000 por 4200 o reiniciar el pc
   console.log('Server Express Ready!');
 });

@@ -2,6 +2,8 @@ import{templateLogin} from './assets/views/templateLogin.js';
 import{templateAcount} from './assets/views/templateAcount.js';
 // crear una funcion que reciba el # segun el mach que retorne otra funcion que va imprimir el temple en el html
 
+
+
 const cambioRuta = (hash) => {
     if(hash === '#/loguin'){
         return showTemplate(hash);

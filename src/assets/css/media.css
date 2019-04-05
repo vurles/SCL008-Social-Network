@@ -11,7 +11,7 @@
     }    
   }
   */
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 767px){
 	body{
 		background:white;
 		background-size: cover;
@@ -29,8 +29,20 @@
 /*Device = Desktops
 Screen = 1281px to higher resolution desktops*/
   
-@media (min-width: 1281px) {
+@media (max-width: 1281px) {
   
-
+  body{
+		background:white;
+		background-size: cover;
+		height: 100vh;
+    }
+    img{
+      width: 100%;
+      justify-content: center;      
+    }
+    .logo,.login,.create,.container{
+        text-align: center;
+        
+    }
+}    
   
-}
