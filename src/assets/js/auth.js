@@ -1,9 +1,6 @@
+
 // creamos dos funciones para el login  con goglee y la creacion de la cuenta
-// solo autentificacion
-
-  // Initialize Firebase
-
-  
+// solo autentificacion  
 
   export const login = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
@@ -28,11 +25,9 @@
 };
 
 
-export const acount = () => {
-    let mail = document.getElementById('email').value;
-    let password = document.getElementById('contrasena').value;
-    console.log(mail);
-    console.log(password);
+export const acount = (mail, password)=> {
+    console.log(mail)
+    console.log(password)
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
       verificar()
@@ -63,7 +58,7 @@ export const eyes = () => {
     }
   });
 }
-const verificar = () => {
+export const verificar = () => {
   let user = firebase.auth().currentUser;
 
 user.sendEmailVerification().then(function() {
