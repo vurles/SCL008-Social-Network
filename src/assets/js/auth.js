@@ -1,4 +1,7 @@
+// creamos dos funciones para el login  con goglee y la creacion de la cuenta
+// solo autentific
 import { templatePostWall } from "../views/templatePostWall.js";
+
 
   export const login = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
