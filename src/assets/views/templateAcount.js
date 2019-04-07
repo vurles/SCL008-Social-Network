@@ -1,5 +1,6 @@
 // DOM
 import{acount} from './../js/auth.js';// esta es la ruta
+
 export const templateAcount = () => {
     const containerAcount = document.createElement('div');
     const contenAcount = `
@@ -13,5 +14,6 @@ export const templateAcount = () => {
     btn.addEventListener('click', () => {
         console.log(acount());
     })
+    acount();
     return containerAcount;
 }

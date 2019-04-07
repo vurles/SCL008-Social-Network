@@ -7,7 +7,13 @@ body{
 background: white;
 }
 
-.logo,.login,.create,.container{
+.logo,.login,.create,.container,.session{
   text-align: center;
-  color: #ff6e49;
-};
+}
+
+.login,.create,.session{
+  margin-top: 3rem;
+  font-size: 20px;
+}
+
+

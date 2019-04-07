@@ -1,11 +1,6 @@
-// creamos dos funciones para el login  con goglee y la creacion de la cuenta
-// solo autentificacion
+import { templatePostWall } from "../views/templatePostWall.js";
 
-  // Initialize Firebase
-
-  
-
-export const login = () => {
+  export const login = () => {
     let provider = new firebase.auth.GoogleAuthProvider();
     //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     firebase.auth().signInWithPopup(provider)
@@ -14,6 +9,7 @@ export const login = () => {
         let token = result.credential.accessToken;
       // La información del usuario que ha iniciado sesión.
         let user = result.user;
+        templatePostWall(user)
         console.log(user);
         //mensajes de errores
       }).catch(function(error) {
@@ -27,7 +23,7 @@ export const login = () => {
    
 };
 
-
+//esta es la funcion para que el usuario cree una cuenta 
 export const acount = () => {
     let mail = document.getElementById('email').value;
     let password = document.getElementById('contrasena').value;
@@ -35,7 +31,8 @@ export const acount = () => {
     console.log(password);
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
-      verificar()
+      verificar();
+      eyes();
     })
     .catch(function(error) {
     // Handle Errors here.
@@ -45,47 +42,21 @@ export const acount = () => {
   });
 // 
   
-// Confirm the link is a sign-in with email link.
-// if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
-//   // Additional state parameters can also be passed via URL.
-//   // This can be used to continue the user's intended action before triggering
-//   // the sign-in operation.
-//   // Get the email if available. This should be available if the user completes
-//   // the flow on the same device where they started it.
-//   var email = window.localStorage.getItem(mail);
-//   if (!email) {
-//     // User opened the link on a different device. To prevent session fixation
-//     // attacks, ask the user to provide the associated email again. For example:
-//     email = window.prompt('Please provide your email for confirmation');
-//   }
-//   // The client SDK will parse the code from the link for you.
-//   firebase.auth().signInWithEmailLink(email, window.location.href)
-//     .then(function(result) {
-//       // Clear email from storage.
-//       window.localStorage.removeItem('emailForSignIn');
-//       // You can access the new user via result.user
-//       // Additional user info profile not available via:
-//       // result.additionalUserInfo.profile == null
-//       // You can check if the user is new or existing:
-//       // result.additionalUserInfo.isNewUser
-//     })
-//     .catch(function(error) {
-//       // Some error occurred, you can inspect the code: error.code
-//       // Common errors could be invalid email and invalid or expired OTPs.
-//     });
-// }
+// observador de datos del usuario
 }
 export const eyes = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      let displayName = user.displayName;
+      console.log(displayName);
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      console.log(photoURL);
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
       // ...
     } else {
       // User is signed out.
@@ -93,6 +64,7 @@ export const eyes = () => {
     }
   });
 }
+// funcion que se llama en forma de promesa .then en la funcion acount
 const verificar = () => {
   let user = firebase.auth().currentUser;
 
@@ -104,18 +76,27 @@ user.sendEmailVerification().then(function() {
   alert('Usuario ya registrado');
 });
 }
-<<<<<<< Updated upstream
-=======
-// esto nos permite enviar un vinculo de autentificacion al correo
-// firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
-//   .then(function() {
-//     // The link was successfully sent. Inform the user.
-//     // Save the email locally so you don't need to ask the user for it again
-//     // if they open the link on the same device.
-//     window.localStorage.setItem('emailForSignIn', email);
-//   })
-//   .catch(function(error) {
-//     // Some error occurred, you can inspect the code: error.code
-//   });
+ 
 
->>>>>>> Stashed changes
+
+//esta funcion es para loguaese con una cuenta ya creada
+export const loginUser = () => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+  
+}
+export const userCheck = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+    } else {
+      // No user is signed in.
+    }
+  });
+}
+
