@@ -1,13 +1,17 @@
 import{templateLogin} from './assets/views/templateLogin.js';
 import{templateAcount} from './assets/views/templateAcount.js';
-import{templatePostWall} from './assets/views/templatePostWall.js'
+import{templatePostWall} from './assets/views/templatePostWall.js';
+import{templateStart} from './assets/views/templateStart.js';
 // crear una funcion que reciba el # segun el mach que retorne otra funcion que va imprimir el temple en el html
 
 
 
 const cambioRuta = (hash) => {
-    if(hash === '#/loguin'){
-        return showTemplate(hash);
+    if(hash=== "" ||"#" ||"/#"||"/"){
+        return showTemplate('#/home')
+    }
+    if(hash === '#/loguin' ){
+        return showTemplate('#/loguin');
     }
     if(hash === '#/crear'){
         return showTemplate(hash);
@@ -28,6 +32,8 @@ const containerRoot = document.getElementById('root');
 containerRoot.innerHTML="";
      // pasamos las condiciones para mostrar los hash de la nueva ruta  
 switch(routerNew){
+        case 'home':
+containerRoot.appendChild(templateStart());
         case'loguin':// aqui van los hash que en este caso los creamos desde el templateLogin
 containerRoot.appendChild(templateLogin());//aqui ponemos las vista que se deben de mostrar
         break;

@@ -27,11 +27,7 @@ import { templatePostWall } from "../views/templatePostWall.js";
 };
 
 //esta es la funcion para que el usuario cree una cuenta 
-export const acount = () => {
-    let mail = document.getElementById('email').value;
-    let password = document.getElementById('contrasena').value;
-    console.log(mail);
-    console.log(password);
+export const acount = (mail, password) => {
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
       verificar();

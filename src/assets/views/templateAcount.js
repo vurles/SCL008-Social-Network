@@ -26,6 +26,5 @@ let razaPets = document.getElementById('typePet').value;
     console.log(razaPets);
 acount(mail, password);
     })
-acount();
 return containerAcount;
 };
