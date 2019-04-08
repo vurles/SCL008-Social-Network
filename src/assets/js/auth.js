@@ -27,11 +27,7 @@ import { templatePostWall } from "../views/templatePostWall.js";
 };
 
 //esta es la funcion para que el usuario cree una cuenta 
-export const acount = () => {
-    let mail = document.getElementById('email').value;
-    let password = document.getElementById('contrasena').value;
-    console.log(mail);
-    console.log(password);
+export const acount = (mail, password) => {
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
       verificar();
@@ -79,6 +75,9 @@ user.sendEmailVerification().then(function() {
   alert('Usuario ya registrado');
 });
 }
+ 
+
+
 //esta funcion es para loguaese con una cuenta ya creada
 export const loginUser = () => {
   firebase.auth().signInWithEmailAndPassword(email, password)
@@ -100,17 +99,3 @@ export const userCheck = () => {
   });
 }
 
-export const session = () => {
-    let emmail = document.getElementById('email').value;
-    let pass = document.getElementById('contrasena').value;
-    console.log(emmail);
-    console.log(pass);
-  firebase.auth().signInWithEmailAndPassword(emmail, pass)
-    .catch(function(error) {
-      // Handle Errors here.
-          let errorCode =alert (error.code);
-          let errorMessage = alert(error.message);
-      // ...
-    });
-  // 
-  }
