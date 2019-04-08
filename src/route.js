@@ -18,30 +18,29 @@ const cambioRuta = (hash) => {
     if(hash === '#/sesion'){
         return showTemplate(hash);
     }
-   
-}
+
+};
 
 // aqui ponemos las vista que se deben de mostrar ejemplo templateLogin templateMuro templetePerfil etc...
 const showTemplate = (hash) =>{
-  const routerNew = hash.substring(2);
-  const containerRoot = document.getElementById('root');
-  containerRoot.innerHTML="";
+const routerNew = hash.substring(2);
+const containerRoot = document.getElementById('root');
+containerRoot.innerHTML="";
      // pasamos las condiciones para mostrar los hash de la nueva ruta  
-  switch(routerNew){
-      case'loguin':// aqui van los hash que en este caso los creamos desde el templateLogin
-      containerRoot.appendChild(templateLogin());//aqui ponemos las vista que se deben de mostrar
-      break;
-      case'crear':
-      containerRoot.appendChild(templateAcount());// bis
-      break;
-      case'muro':
-      containerRoot.appendChild(templatePostWall());
-      break;
-      default:
-      containerRoot.innerHTML = `<p> Error 404 </p>`
-  }
-
-} 
+switch(routerNew){
+        case'loguin':// aqui van los hash que en este caso los creamos desde el templateLogin
+containerRoot.appendChild(templateLogin());//aqui ponemos las vista que se deben de mostrar
+        break;
+        case'crear':
+containerRoot.appendChild(templateAcount());// bis
+        break;
+        case'muro':
+containerRoot.appendChild(templatePostWall());
+        break;
+        default:
+containerRoot.innerHTML = `<p> Error 404 </p>`
+    }
+}; 
 
 // inicializar la rutas para ejecutar la funcion cambioRuta
 
@@ -50,8 +49,8 @@ export const initRout = () => {
     if('onhashchange' in window) {
         window.onhashchange = () => {
             cambioRuta(window.location.hash);
-        }
+        };
     }
-}
+};
 
 // reconoce un cambio de hash y le paso otro hash al cambioRuta

@@ -1,16 +1,4 @@
-/*@media only screen and (max-width: 600px) {
-    body{
-        background: white;
-        }
-        .logo,.login,.create,.container{
-          text-align: center;
-        }
-    .img{
-        text-align: center;
-        width: 50%;  
-    }    
-  }
-  */
+/*
   @media screen and (max-width: 767px){
 	body{
 		background:white;
@@ -28,11 +16,11 @@
 }    
 /*Device = Desktops
 Screen = 1281px to higher resolution desktops*/
-  
+ /*
 @media (max-width: 1281px) {
   
   body{
-		background:white;
+		background-color: rgb(105, 105, 105);
 		background-size: cover;
 		height: 100vh;
     }
@@ -42,7 +30,9 @@ Screen = 1281px to higher resolution desktops*/
     }
     .logo,.login,.create,.container{
         text-align: center;
+        margin-top: 3rem;
+        font-size: 20px;
         
     }
 }    
-  
+*/
