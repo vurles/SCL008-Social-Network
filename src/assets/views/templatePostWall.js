@@ -16,6 +16,14 @@ export const templatePostWall = (user) => {
             btn.addEventListener('click', () => {
             console.log(acount());
         })
+<<<<<<< Updated upstream
             eyes();
+=======
+        const btnChao = containerPostWall.querySelector('#logout');
+        btnChao.addEventListener('click', () => {
+            singOut();
+        })
+        
+>>>>>>> Stashed changes
 return containerPostWall;
 };
