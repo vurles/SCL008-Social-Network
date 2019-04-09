@@ -4,10 +4,10 @@ import {login, eyes, loginUser} from './../js/auth.js';
 export const templateLogin = () => {
       const containerLogin = document.createElement('div');// creamos el div para mostar la info que desamos ver
       const contentLogin = ` <div class= "formLogin"> 
-         <button id="loguin">Ingresar con Google</button>
+         <button id="loguin" class= "createBtn">Ingresar con Google</button>
          <input type="email" placeholder="Ingresa email" id="email">
          <input type="password" placeholder="Ingresa contraseña" id="contrasena">
-         <button id="sesion">Iniciar sesion</button>
+         <button id="sesion" class = "createBtn">Iniciar sesion</button>
          </div>`
       containerLogin.innerHTML = contentLogin;
       const btn = containerLogin.querySelector('#loguin');
