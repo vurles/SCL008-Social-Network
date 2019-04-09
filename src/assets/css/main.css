@@ -20,7 +20,7 @@ body{
   width: 100%;
   align-items: center;
 }
-a{
+a,h4,h3{
   margin-top: 3rem;
   font-size: 20px;
   color:white;
@@ -46,11 +46,15 @@ a{
 .userForm{
   display:flex;
   font-family: 'Nova Round', cursive;
-}
+  align-items: center;
+  flex-flow: column wrap;
+} 
+
 .createBtn{
   font-family: 'Nova Round', cursive;
+  color: white;
   margin-top: 1em;
-  font-size: 30px;
+  font-size: 25px;
   text-decoration: none;
   background-color: transparent;
   border: 2px solid white;
@@ -58,8 +62,40 @@ a{
   padding: 4px;
 }
 .formLogin{
+  display:flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
 
 }
+input{
+  margin-top: 3rem;
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+  font-family: 'Nova Round', cursive;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 4px;
+
+}
+.postForm{
+  display:flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+}
+textarea{
+  justify-content: flex-start;
+  text-decoration: none;
+  font-family: 'Nova Round', cursive;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 4px;
+}
+
 /*.footer {
   
   color: #ffffff;
