@@ -6,12 +6,15 @@ export const templateAcount = () => {
 const containerAcount = document.createElement('div');//se crea clase para estilos
 const contenAcount = `<div class ="userForm">
     <h4>Registro de Usuarios</h4>
-    <input type="text" placeholder="Nombre mascota" id="namePet"/><br>
-    <input type="text" placeholder="Perro o Gato" id="typePet"/><br>
-    <input type="text" placeholder="Ingresa email" id="email"/><br>
-    <input type="password" placeholder="Ingresa contraseña" id="contrasena"/><br>
+    <input type="text" placeholder="Nombre mascota" id="namePet"/>
+    <input type="text" placeholder="Perro o Gato" id="typePet"/>
+    <input type="text" placeholder="Ingresa email" id="email"/>
+    <input type="password" placeholder="Ingresa contraseña" id="contrasena"/>
     <button id="crear" class ="createBtn">crear cuenta</button>
-    </div>` 
+    <section>
+    <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
+</section>
+    </div>`
 containerAcount.innerHTML = contenAcount;
 
 const btn = containerAcount.querySelector('#crear');
