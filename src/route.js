@@ -8,7 +8,7 @@ import{templateStart} from './assets/views/templateStart.js';
 
 const cambioRuta = (hash) => {
     console.log(hash);
-    if(hash === ""){
+    if(hash === "" || hash === '#' || hash === '/#' || hash === '#/'){
         return showTemplate('#/home')
     }
     if(hash === '#/loguin' ){
@@ -35,6 +35,7 @@ containerRoot.innerHTML="";
 switch(routerNew){
         case 'home':
 containerRoot.appendChild(templateStart());
+        break;
         case'loguin':// aqui van los hash que en este caso los creamos desde el templateLogin
 containerRoot.appendChild(templateLogin());//aqui ponemos las vista que se deben de mostrar
         break;

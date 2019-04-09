@@ -1,4 +1,4 @@
-import {loginUser, login, eyes, chaopescao } from './../js/auth.js';
+import {loginUser, login, eyes, singOut } from './../js/auth.js';
 export const templatePostWall = (user) => {
             console.log(user);
             console.log(firebase.auth().currentUser);
@@ -7,12 +7,19 @@ export const templatePostWall = (user) => {
             <h3>TinPet</h3>
             <textarea cols="60" rows="30"></textarea>
             <button id="muro">Publicar</button>
+            <button id=""></button>
+            <button onclick="window.location.href='#/loguin'" id='logout'>Cerrar sesion</button>
             </div>`
     containerPostWall.innerHTML = contentPost;
         const btn = containerPostWall.querySelector('#muro');
             btn.addEventListener('click', () => {
             console.log(acount());
         })
-            eyes();
+        const btnChao = containerPostWall.querySelector('#logout');
+        btnChao.addEventListener('click', () => {
+            singOut();
+        })
+        
+
 return containerPostWall;
 };
