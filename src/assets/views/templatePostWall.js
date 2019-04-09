@@ -1,4 +1,4 @@
-import {loginUser, login, eyes } from './../js/auth.js';
+import {loginUser, login, eyes, chaopescao } from './../js/auth.js';
 export const templatePostWall = (user) => {
             console.log(user);
             console.log(firebase.auth().currentUser);

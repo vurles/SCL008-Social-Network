@@ -1,5 +1,5 @@
 //  DOM
-import {login, eyes, loginUser} from './../js/auth.js';
+import { loginUser} from './../js/auth.js';
 
 export const templateLogin = () => {
       const containerLogin = document.createElement('div');// creamos el div para mostar la info que desamos ver
@@ -16,8 +16,12 @@ export const templateLogin = () => {
       })
       const btn2 = containerLogin.querySelector('#sesion');
          btn2.addEventListener('click', () => {
+            let email = document. getElementById('email');
+            let password = document.getElementById('contrasena');
          /*console.log(session());*/
+         loginUser(email,contrasena);
       })
+     
       return containerLogin
       login();
       eyes();
