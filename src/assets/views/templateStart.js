@@ -25,6 +25,6 @@ export const templateStart = () => {
     <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </section>`
         containerStart.innerHTML = contentStart;
-
+      //  loginUser(mail,password);
 return containerStart;
 }

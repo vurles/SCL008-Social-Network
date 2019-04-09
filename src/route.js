@@ -7,7 +7,8 @@ import{templateStart} from './assets/views/templateStart.js';
 
 
 const cambioRuta = (hash) => {
-    if(hash=== "" ||"#" ||"/#"||"/"){
+    console.log(hash);
+    if(hash === ""){
         return showTemplate('#/home')
     }
     if(hash === '#/loguin' ){
@@ -17,7 +18,7 @@ const cambioRuta = (hash) => {
         return showTemplate(hash);
     }
     if(hash === '#/muro'){
-        return showTemplate(has);
+        return showTemplate(hash);
     }
     if(hash === '#/sesion'){
         return showTemplate(hash);
@@ -52,6 +53,8 @@ containerRoot.innerHTML = `<p> Error 404 </p>`
 
 export const initRout = () => {
     window.addEventListener('load', cambioRuta(window.location.hash));
+
+
     if('onhashchange' in window) {
         window.onhashchange = () => {
             cambioRuta(window.location.hash);

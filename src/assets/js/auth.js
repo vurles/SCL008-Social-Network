@@ -25,13 +25,13 @@ import { templatePostWall } from "../views/templatePostWall.js";
       });
    
 };
-
 //esta es la funcion para que el usuario cree una cuenta 
 export const acount = (mail, password) => {
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
       verificar();
       eyes();
+      // funcion guardarUsuarioenDatabase();
     })
     .catch(function(error) {
     // Handle Errors here.
@@ -48,7 +48,7 @@ export const eyes = () => {
     if (user) {
       // User is signed in.
       let displayName = user.displayName;
-      console.log(displayName);
+      console.log(user.displayName);
       let email = user.email;
       let emailVerified = user.emailVerified;
       let photoURL = user.photoURL;
@@ -79,8 +79,8 @@ user.sendEmailVerification().then(function() {
 
 
 //esta funcion es para loguaese con una cuenta ya creada
-export const loginUser = () => {
-  firebase.auth().signInWithEmailAndPassword(email, password)
+export const loginUser = (email, contrasena) => {
+  firebase.auth().signInWithEmailAndPassword(email, contrasena)
   .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -89,13 +89,18 @@ export const loginUser = () => {
   });
   
 }
-export const userCheck = () => {
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-    } else {
-      // No user is signed in.
-    }
-  });
-}
+// export const userCheck = () => {
+//   firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       // User is signed in.
+//     } else {
+//       // No user is signed in.
+//     }
+//   });
+// }
 
+//esta es para cerrar sesión.
+  export const chaopescao = () => {
+    firebase.auth().signOut()
+    
+  }
