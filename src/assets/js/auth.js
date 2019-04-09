@@ -45,23 +45,26 @@ export const acount = (mail, password) => {
 }
 export const eyes = () => {
   firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      let displayName = user.displayName;
-      console.log(user.displayName);
-      let email = user.email;
-      let emailVerified = user.emailVerified;
-      let photoURL = user.photoURL;
-      console.log(photoURL);
-      let isAnonymous = user.isAnonymous;
-      let uid = user.uid;
-      let providerData = user.providerData;
-      // ...
-    } else {
-      // User is signed out.
-      // ...
-    }
-  });
+      if (user) {
+          console.log('usuario existente');
+          soloUsuariosActivos(user);
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        console.log('***********');
+        console.log(emailVerified);
+        console.log('***********');
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // ...
+      } else {
+          console.log('No existe usuari activo');
+        // User is signed out.
+        // ...
+      }
+    });
 }
 // funcion que se llama en forma de promesa .then en la funcion acount
 const verificar = () => {
@@ -100,7 +103,14 @@ export const loginUser = (email, contrasena) => {
 // }
 
 //esta es para cerrar sesión.
-  export const chaopescao = () => {
+  export const singOut = () => {
     firebase.auth().signOut()
-    
-  }
+    .then(function() {
+        alert('cierre de sesión exitoso')
+        console.log('saliendo......')
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+        console.log(error);
+      });
+}

@@ -1,5 +1,5 @@
 //  DOM
-import { loginUser} from './../js/auth.js';
+import {login, loginUser} from './../js/auth.js';
 
 export const templateLogin = () => {
       const containerLogin = document.createElement('div');// creamos el div para mostar la info que desamos ver
