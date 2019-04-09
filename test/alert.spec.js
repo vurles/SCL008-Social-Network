@@ -1,4 +1,4 @@
-import { validateMail, validateInput, validateData } from './../src/assets/js/alert.js';
+import { validateMail, validateInput, validateData } from '../src/assets/js/alert.js';
 
 describe('validateMail', () => {
     it('Debería retornar false, si el correo no es valido', () => {
