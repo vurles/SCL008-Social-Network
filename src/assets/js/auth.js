@@ -68,11 +68,11 @@ const verificar = () => {
   let user = firebase.auth().currentUser;
 
 user.sendEmailVerification().then(function() {
-  // Email sent.
-  console.log('Enviando verificación al correo')
+// Email sent.
+console.log('Enviando verificación al correo')
 }).catch(function(error) {
-  // An error happened.
-  alert('Usuario ya registrado');
+// An error happened.
+alert('Usuario ya registrado');
 });
 }
  
