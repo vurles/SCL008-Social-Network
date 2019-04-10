@@ -5,6 +5,12 @@ import { acount } from './../js/auth.js';// esta es la ruta
 export const templateAcount = () => {
 const containerAcount = document.createElement('div');//se crea clase para estilos
 const contenAcount = `<div class ="userForm">
+<header>
+            <div class="logo">
+            <a href="index.html"> 
+            <img src="assets/img/tinpet.png" style="width: 150px;" alt="Logo"></a>
+        </div>
+    </header>
     <h4>Registro de Usuarios</h4>
     <input type="text" placeholder="Nombre mascota" id="namePet"/>
     <input type="text" placeholder="Perro o Gato" id="typePet"/>
