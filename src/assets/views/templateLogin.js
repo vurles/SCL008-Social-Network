@@ -4,6 +4,12 @@ import {login, loginUser} from './../js/auth.js';
 export const templateLogin = () => {
       const containerLogin = document.createElement('div');// creamos el div para mostar la info que desamos ver
       const contentLogin = ` <div class= "formLogin"> 
+      <header>
+            <div class="logo">
+            <a href="index.html"> 
+            <img src="assets/img/tinpet.png" style="width: 150px;" alt="Logo"></a>
+        </div>
+    </header>
          <button id="loguin" class= "createBtn">Ingresar con Google</button>
          <input type="email" placeholder="Ingresa email" id="email">
          <input type="password" placeholder="Ingresa contraseña" id="contrasena">
