@@ -33,7 +33,7 @@ let razaPets = document.getElementById('typePet').value;
     console.log(password);
     console.log(namePets);
     console.log(razaPets);
-acount(mail, password);
+acount(mail, password, namePets, razaPets);
     })
 return containerAcount;
 };

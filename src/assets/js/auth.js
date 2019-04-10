@@ -26,7 +26,7 @@ import { templatePostWall } from "../views/templatePostWall.js";
    
 };
 //esta es la funcion para que el usuario cree una cuenta 
-export const acount = (mail, password) => {
+export const acount = (mail, password, namePets, razaPets) => {
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(function(){
       verificar();
@@ -40,9 +40,19 @@ export const acount = (mail, password) => {
     // ...
   });
 // 
-  
+firebase.auth().onAuthStateChanged(function(user) { // escucha de quien se creo
+  if (user) { // si esta activo
+    firebase.database().ref('users/' + user.uid).set({
+      email: mail, // aqui tu le das lo que quieres que te guarde en database
+      constraseña: password,
+      nombreMascota: namePets,
+      perroGato: razaPets
+    });
+  }
 // observador de datos del usuario
+})
 }
+
 export const eyes = () => {
   firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
