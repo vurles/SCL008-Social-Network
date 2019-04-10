@@ -3,7 +3,7 @@
   padding: 0%;
 }
 
-  /*@media screen and (max-width: 767px){*/
+
 
 body{
   background: linear-gradient(rgb(255, 82, 44),hsl(357, 100%, 69%))
@@ -14,14 +14,14 @@ body{
   justify-content: center;
   
 }
-.incomeButton{
+.userForm,.incomeButton, .formLogin, .postForm{
   display: flex;
   flex-flow: column wrap;
   width: 100%;
   align-items: center;
 }
-a{
-  margin-top: 3rem;
+a,h4,h3{
+  margin-top: 30px;
   font-size: 20px;
   color:white;
   text-decoration: none;
@@ -43,23 +43,37 @@ a{
   justify-content: flex-end;
   flex-flow: column wrap;
 }
-.userForm{
-  display:flex;
-  font-family: 'Nova Round', cursive;
-}
 .createBtn{
   font-family: 'Nova Round', cursive;
+  color: white;
   margin-top: 1em;
-  font-size: 30px;
+  font-size: 25px;
   text-decoration: none;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 30px;
   padding: 4px;
 }
-.formLogin{
+input{
+  margin-top: 2rem;
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+  font-family: 'Nova Round', cursive;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 4px;
 
 }
+textarea{
+  justify-content: flex-start;
+  text-decoration: none;
+  font-family: 'Nova Round', cursive;
+  border: 2px solid white;
+  padding: 4px;
+}
+
 /*.footer {
   
   color: #ffffff;
@@ -67,4 +81,3 @@ a{
   font-size: 12px;
   padding: 15px;
 }*/
-  
