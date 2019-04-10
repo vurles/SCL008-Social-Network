@@ -1,4 +1,4 @@
-import {loginUser, login, eyes, chaopescao } from './../js/auth.js';
+import {loginUser, login, eyes, singOut } from './../js/auth.js';
 export const templatePostWall = (user) => {
             console.log(user);
             console.log(firebase.auth().currentUser);
@@ -16,14 +16,10 @@ export const templatePostWall = (user) => {
             btn.addEventListener('click', () => {
             console.log(acount());
         })
-<<<<<<< Updated upstream
-            eyes();
-=======
         const btnChao = containerPostWall.querySelector('#logout');
         btnChao.addEventListener('click', () => {
             singOut();
         })
         
->>>>>>> Stashed changes
 return containerPostWall;
 };
