@@ -14,6 +14,7 @@ export const templatePostWall = (user) => {
             <h3>Muro</h3>
             <textarea cols="30" rows="6"placeholder="descripcion"></textarea>
             <button id="muro" class = "createBtn">Publicar</button>
+            <button onclick="window.location.href='#/loguin'" id='logout'>Salir</button>
             <section>
     <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </section>
