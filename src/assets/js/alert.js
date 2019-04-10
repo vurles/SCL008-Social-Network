@@ -21,3 +21,20 @@ export const validateInput = (email, password) => {
         return true;
     }
 }
+export const validatePass = (password) => {
+    console.log(typeof(password))
+    if(password.length < 6) {
+        return false;
+    } else {
+        return true;
+    }
+
+    /*
+    if (password === '12345' ) {
+        return false;
+    }
+
+    return true; */
+    }
+
+   
