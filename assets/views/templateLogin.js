@@ -11,9 +11,9 @@ export const templateLogin = () => {
         </div>
     </header>
          <button id="loguin" class= "createBtn">Ingresar con Google</button>
-         <input type="email" placeholder="Ingresa email" id="email">
+         <input type="email" placeholder="Ingresa email" id="mail">
          <input type="password" placeholder="Ingresa contraseña" id="contrasena">
-         <button id="sesion" class = "createBtn">Iniciar sesion</button>
+         <button id="sesion" onclick="window.location.href='#/muro'" class ="createBtn">Iniciar sesion</button>
          <section>
     <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </section>
@@ -22,13 +22,16 @@ export const templateLogin = () => {
       const btn = containerLogin.querySelector('#loguin');
          btn.addEventListener('click', () => {
             login();
+            console.log (login());
       })
       const btn2 = containerLogin.querySelector('#sesion');
          btn2.addEventListener('click', () => {
-            let email = document. getElementById('email');
-            let password = document.getElementById('contrasena');
+            let email = document.getElementById('mail').value;
+            console.log(email);
+            let password = document.getElementById('contrasena').value;
          /*console.log(session());*/
-         loginUser(email,contrasena);
+         loginUser(email,password);
+         console.log(loginUser());
       })
      
       return containerLogin

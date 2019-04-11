@@ -1,6 +1,7 @@
 // creamos dos funciones para el login  con goglee y la creacion de la cuenta
 // solo autentific
 import { templatePostWall } from "../views/templatePostWall.js";
+import {templateLogin} from '../views/templateLogin.js';
 
 
   export const login = () => {
@@ -92,8 +93,17 @@ alert('Usuario ya registrado');
 
 
 //esta funcion es para loguaese con una cuenta ya creada
-export const loginUser = (email, contrasena) => {
-  firebase.auth().signInWithEmailAndPassword(email, contrasena)
+export const loginUser = (email, password) => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(function(){
+    if (user) { // si esta activo
+      firebase.database().ref(email + user.uid).set({
+        email: email, // aqui tu le das lo que quieres que te guarde en database
+        password: password,
+      });
+    }
+  })
+  
   .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;

@@ -1,8 +1,8 @@
 
-import {loginUser, login, eyes, singOut } from './../js/auth.js';
+import { singOut } from './../js/auth.js';
 export const templatePostWall = (user) => {
-            console.log(user);
-            console.log(firebase.auth().currentUser);
+            //console.log(user);
+           // console.log(firebase.auth().currentUser);
         const containerPostWall = document.createElement('div');// creamos el div para mostar la info que desamos ver
         const contentPost = ` <div class= "postForm">
         <header>
