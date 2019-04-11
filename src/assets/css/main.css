@@ -6,7 +6,7 @@
 
 
 body{
-  background: linear-gradient(rgb(255, 82, 44),hsl(357, 100%, 69%))
+  background: linear-gradient(rgb(255, 82, 44),hsl(357, 100%, 69%));
 
 }
 .logo{
@@ -57,13 +57,11 @@ a,h4,h3{
 input{
   margin-top: 2rem;
   font-size: 20px;
-  color:white;
-  text-decoration: none;
   font-family: 'Nova Round', cursive;
-  background-color: transparent;
   border: 2px solid white;
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 4px;
+  color: #747481;
 
 }
 textarea{
