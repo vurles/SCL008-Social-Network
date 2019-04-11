@@ -14,7 +14,7 @@ export const validateData = (namePet, typePet, email, contrasena) => {
 }
 
 export const validateInput = (email, password) => {
-    if(email === '' || password === ''){
+     if(email === '' || password === ''){
         return false;
     }
     else{
@@ -23,6 +23,9 @@ export const validateInput = (email, password) => {
 }
 export const validatePass = (password) => {
     console.log(typeof(password))
+    if(typeof(password) !== "string"){
+        return "Error en tipo de dato"
+    }
     if(password.length < 6) {
         return false;
     } else {

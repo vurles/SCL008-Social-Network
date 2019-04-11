@@ -16,6 +16,8 @@ describe('validateMail', () => {
 describe('validateInput', () => {
     it('Debería retornar false, si los input para iniciar sesión estan vacíos', () => {
         expect(validateInput('','')).toBe(false);
+        expect(validateInput('','123456')).toBe(false);
+        expect(validateInput('ftapiamorales@gmail.com','')).toBe(false);
     })
 })
 
@@ -28,6 +30,11 @@ describe('validateInput', () => {
 describe('validateData', () => {
     it('Debería retornar false, si los input para registrarse estan vacíos', () => {
         expect(validateData('','','','')).toBe(false);
+        expect(validateData('manchon','perro','ftapiamorales@gmail.com','')).toBe(false);
+        expect(validateData('edu','gato','','567890')).toBe(false);
+        expect(validateData('lilu','','ftapiamorales@gmail.com','123456')).not.toBe(true);
+        expect(validateData('','loro','ftapiamorales@gmail.com','123456')).not.toBe(true);
+
     })
 })
 
@@ -43,4 +50,8 @@ describe ('validatePass',() =>{
     it ('si password tiene menos de 6 caracteres',() => {
         expect(validatePass('12345')).toBe (false);
     })
+    it('Deberia retornar "Error en tipo de dato" si password no es tipo string',() => {
+        expect(validatePass(123456)).toBe('Error en tipo de dato');
+    })
 })
+
