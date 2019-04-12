@@ -12,55 +12,67 @@
 * [Contenido de referencia](#pistas-/-tips-/-lecturas-complementarias)
 
 ***
+'./tinpet.png;
 
 ## Preámbulo
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+  En este nuevo proyecto, se nos pidio crear una red social con un tema a eleccion propia, como primera etapa de proyecto teniamos que formular una idea para nuestra red social y crear nustro flujo de trabajo 
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+  teniendo la idea y en conjunto enpezamos a crear nuestra red social "tinpet"
 
-## Resumen del proyecto
 
-En este proyecto construirás una Red Social sobre lo que decidan tú y tu equipo.
-Podría ser, por ejemplo, sobre alimentación saludable, feminismo, educación,
-salud, energías renovables, amantes de las [empanadas](https://es.wikipedia.org/wiki/Empanada) o de
-los [tacos de canasta](https://es.wikipedia.org/wiki/Taco), etc.
+## Tinpet
 
-Tu Red Social tendrá que permitir a cualquier usuario crear una cuenta de
-acceso y loguearse con ella; crear, editar, borrar y _"likear"_ publicacciones.
+tinpet esta pensada para personas con perros o gatos que quieran encontrarle una pareja a su mascota, ya sea para cruzar o simplemente para tener un compañero de juegos, con esta red social se podra crear una cuenta donde los datos de usuario pide como requisito dar el nombre de tu mascota y si tienes un perro o gato para poder encontrar la pareja ideal y hacer match para tu mascota.   
 
-## Objetivos de Aprendizaje
+## Historias de Usuarios
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+ para tener una mayor organizacion en este proyecto creamos historias de usuarios las cuales tiene criterios de aceptacion y definicion de terminado.
 
-## Consideraciones generales
+ Historia de usuario 1 
 
-- Este proyecto se debe "resolver" en tríos.
+ YO COMO FUTURO USUARIO QUIERO PODER REGISTRARME CON MI EMAIL.
 
-- La lógica del proyecto debe estar implementada completamente en JavaScript (ES6+),
-HTML y CSS :smiley:. Para este proyecto no está permitido utilizar
-frameworks o librerías de CSS y JS.
+Criterios de Aceptacion
 
-- La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todo lo esperado **cada sprint**. _No se dividan el
-trabajo como en una fábrica._
+- Llenar formulario y crear contraseña
 
-- Trabajen en una sola historia por vez, no pueden avanzar a la siguiente sin
-haber completado la anterior.
+- Poder activar cuenta con link enviado al correo
 
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+- Conectar con firebase para autentificacion
 
+- Poder guardar datos en database.
+
+- Crear pagina de inicio que contenga los botones de crear cuenta  
+
+Definicion de terminado.
+
+
+- El codigo esta en repositorio
+
+- Se designa quien es la master y las colaboradoras 
+
+- Se instala linter y los test unitarios para la parte de registro 
+
+- Se crea cuenta en firebase 
+
+- Se crean test con jest y pasa los test nesesarios 
+
+- Se trabaja en pair programming
+
+- Se crea cuenta en firebase
+
+- se guardan datos en database 
+
+- Es SPA
+
+- Se hacen test de usabilidad y incorporan mejoras 
+
+- Pedimos code review
+
+- Los botones son funcionales 
+
+- Se usa git tags para dar orden a los commit.
 ## Parte obligatoria
 
 ### General

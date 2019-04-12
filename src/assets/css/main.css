@@ -72,13 +72,14 @@ textarea{
   border: 2px solid white;
   padding: 4px;
 }
-.footer {
+/*.footer {
   display: flex;
   align-items: flex-end;
   text-align: center;
   font-size: 12px;
   padding: 15px;
-}
+}*/
 p{ font-family: 'Nova Round', cursive;
   color:white;
+  height: 100px;
 }
