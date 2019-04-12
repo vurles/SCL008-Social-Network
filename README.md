@@ -146,30 +146,28 @@ Criterios de Aceptacion
 
 - Es SPA
 
-- Se hacen test de usabilidad y incorporan mejoras 
-
-- Pedimos code review
-
-- Los botones son funcionales 
-
-- Se usa git tags para dar orden a los commit.
+- git tags para dar orden a los commit.
 
 link trello: https://trello.com/b/3o9npc2G/red-social
 
 ## Herramientas Utilizadas
 
--Javascript
--Html
--Css
--Firebase
+- Javascript
 
-### Prototipo de baja 
+- Html
+
+- Css
+
+- Firebase
+
+## Prototipos de Baja y Alta Fidelidad.
 
 Se creo un prototipo de baja y alta fidelidad, para darnos una mejor perspectiva en nuestro trabajo, y asi poder desarrollar mejor nuestra aplicacion.
 
-![PROTOTIPODEBAJA1.png](/PROTOTIPODEBAJA1.png)
-![PROTOTIPODEBAJA2.png](/PROTOTIPODEBAJA2.png)
+![PROTOTIPODEBAJA1.png](/PROTOTIPODEBAJA1.jpeg)
+![PROTOTIPODEBAJA2.png](/PROTOTIPODEBAJA2.jpeg)
 
-
+link:https://www.figma.com/file/BoqqdZVHgZyiGjPbIcrbkdm6/Untitled?node-id=1%3A2
 
 ***
+
