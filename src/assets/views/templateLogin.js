@@ -10,10 +10,10 @@ export const templateLogin = () => {
             <img src="assets/img/tinpet.png" style="width: 150px;" alt="Logo"></a>
         </div>
     </header>
-         <button id="loguin" class= "createBtn">Ingresar con Google</button>
+         <button id="loguin" class= "createBtn" onclick="window.location.href='#/muro'">Ingresar con Google</button>
          <input type="email" placeholder="Ingresa email" id="mail">
          <input type="password" placeholder="Ingresa contraseña" id="contrasena">
-         <button id="sesion" onclick="window.location.href='#/muro'" class ="createBtn">Iniciar sesion</button>
+         <button id="sesion" class ="createBtn" onclick="window.location.href='#/muro'">Iniciar sesion</button>
          <section>
     <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </section>
