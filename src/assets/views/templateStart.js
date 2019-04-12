@@ -11,13 +11,10 @@ export const templateStart = () => {
     <section>
         <form class ="incomeButton">
             <button class="login">
-                <a href="#/loguin">Login</a>
+                <a href="#/loguin">Iniciar sesión</a>
             </button>
             <button class="create">
                 <a href="#/crear">Crear cuenta</a>
-            </button>
-            <button class="session">
-                <a href="#/sesion">Iniciar sesión</a>
             </button>
         </form> 
     </section>
