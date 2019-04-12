@@ -11,7 +11,7 @@ export const templateStart = () => {
     <section>
         <form class ="incomeButton">
             <button class="login">
-                <a href="#/loguin">Login Google</a>
+                <a href="#/loguin">Login</a>
             </button>
             <button class="create">
                 <a href="#/crear">Crear cuenta</a>
