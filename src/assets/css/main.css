@@ -3,8 +3,6 @@
   padding: 0%;
 }
 
-
-
 body{
   background: linear-gradient(rgb(255, 82, 44),hsl(357, 100%, 69%));
 
@@ -68,14 +66,18 @@ textarea{
   justify-content: flex-start;
   text-decoration: none;
   font-family: 'Nova Round', cursive;
+  color:white;
   border: 2px solid white;
   padding: 4px;
 }
-
 /*.footer {
-  
-  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
   text-align: center;
   font-size: 12px;
   padding: 15px;
 }*/
+p{ font-family: 'Nova Round', cursive;
+  color:white;
+  height: 100px;
+}
