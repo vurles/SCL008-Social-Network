@@ -16,7 +16,7 @@ const contenAcount = `<div class ="userForm">
     <input type="text" placeholder="Perro o Gato" id="typePet"/>
     <input type="text" placeholder="Ingresa email" id="email"/>
     <input type="password" placeholder="Ingresa contraseña" id="contrasena"/>
-    <button id="crear" class ="createBtn">crear cuenta</button>
+    <button id="crear" class ="createBtn" onclick="window.location.href='#/muro'">crear cuenta</button>
     <section>
     <img  class="image" src="assets/img/perro y gato.png" alt="Imagen de perros y gato">
 </section>
